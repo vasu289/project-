@@ -1,0 +1,183 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BOUNDARY XI | Cricket Equipment</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <div class="top-bar">
+    FREE SHIPPING ON ORDERS OVER ₹2,000
+    <span>BUILT FOR THE GAME. MADE FOR YOU.</span>
+  </div>
+
+  <header class="navbar">
+    <button class="menu-btn" id="menuBtn" aria-label="Open menu">☰</button>
+
+    <nav class="nav-left" id="navLinks">
+      <a href="#shop">SHOP</a>
+      <a href="#shop">CRICKET GEAR</a>
+      <a href="#about">OUR STORY</a>
+    </nav>
+
+    <a href="#" class="logo">BOUNDARY<span>XI</span></a>
+
+    <div class="nav-actions">
+      <a href="#shop" aria-label="Search products">⌕</a>
+      <a href="#cart" aria-label="Shopping cart">CART <b id="cartCount">0</b></a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <p class="eyebrow">THE NEXT GENERATION OF CRICKET</p>
+        <h1>OWN<br>THE <span>CREASE.</span></h1>
+        <p class="hero-description">
+          Gear built for those who live for the game.
+          Step onto the pitch with confidence.
+        </p>
+        <a href="#shop" class="primary-btn">EXPLORE THE COLLECTION ↗</a>
+      </div>
+      <div class="hero-number">01 / 04</div>
+      <div class="hero-side-text">PLAY BOLD. PLAY YOUR WAY.</div>
+    </section>
+
+    <section class="ticker">
+      <span>BUILT FOR BOUNDARIES</span>
+      <span>✳</span>
+      <span>ENGINEERED FOR PERFORMANCE</span>
+      <span>✳</span>
+      <span>MADE FOR CRICKETERS</span>
+    </section>
+
+    <section class="intro section-padding" id="about">
+      <div>
+        <p class="eyebrow dark">NOT JUST EQUIPMENT.</p>
+        <h2>IT'S YOUR<br><span>GAME FACE.</span></h2>
+      </div>
+      <p class="intro-text">
+        From the first ball to the final over, find cricket essentials
+        designed to help you play with confidence. Get ready to make
+        every innings count.
+      </p>
+    </section>
+
+    <section class="shop-section section-padding" id="shop">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow dark">THE BOUNDARY XI EDIT</p>
+          <h2>GEAR UP.</h2>
+        </div>
+        <p class="product-total" id="productTotal">6 PRODUCTS</p>
+      </div>
+
+      <div class="shop-controls">
+        <div class="filters" id="filters">
+          <button class="filter-btn active" data-category="All">ALL GEAR</button>
+          <button class="filter-btn" data-category="Bats">BATS</button>
+          <button class="filter-btn" data-category="Protection">PROTECTION</button>
+          <button class="filter-btn" data-category="Clothing">CLOTHING</button>
+          <button class="filter-btn" data-category="Accessories">ACCESSORIES</button>
+        </div>
+
+        <select id="sortSelect" aria-label="Sort products">
+          <option value="featured">Sort: Featured</option>
+          <option value="low">Price: Low to High</option>
+          <option value="high">Price: High to Low</option>
+          <option value="name">Name: A to Z</option>
+        </select>
+      </div>
+
+      <div class="product-grid" id="productGrid"></div>
+    </section>
+
+    <section class="feature-banner">
+      <div>
+        <p class="eyebrow">MADE FOR THE MIDDLE</p>
+        <h2>YOUR MOMENT.<br>YOUR <span>INNINGS.</span></h2>
+        <a href="#shop" class="primary-btn">FIND YOUR GEAR ↗</a>
+      </div>
+    </section>
+
+    <section class="benefits section-padding">
+      <div class="benefit">
+        <span>01</span>
+        <h3>GAME-READY GEAR</h3>
+        <p>Essentials for training, practice and match day.</p>
+      </div>
+      <div class="benefit">
+        <span>02</span>
+        <h3>BUILT FOR COMFORT</h3>
+        <p>Find equipment that fits your game and style.</p>
+      </div>
+      <div class="benefit">
+        <span>03</span>
+        <h3>MADE FOR EVERY OVER</h3>
+        <p>Get ready to play your best from start to finish.</p>
+      </div>
+    </section>
+
+    <section class="cart-section section-padding" id="cart">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow dark">YOUR MATCH-DAY ESSENTIALS</p>
+          <h2>YOUR BAG.</h2>
+        </div>
+        <button class="text-btn" id="clearCartBtn">CLEAR BAG ×</button>
+      </div>
+
+      <div class="cart-layout">
+        <div id="cartItems" class="cart-items">
+          <p class="empty-cart">Your bag is waiting for its first pick.</p>
+        </div>
+
+        <aside class="cart-summary">
+          <h3>ORDER SUMMARY</h3>
+
+          <div class="summary-row">
+            <span>Subtotal</span>
+            <span id="subtotal">₹0</span>
+          </div>
+          <div class="summary-row">
+            <span>Discount</span>
+            <span id="discount">−₹0</span>
+          </div>
+          <div class="summary-row">
+            <span>Delivery</span>
+            <span id="delivery">₹0</span>
+          </div>
+
+          <div class="coupon-row">
+            <input type="text" id="couponInput" placeholder="Coupon code">
+            <button id="applyCouponBtn">APPLY</button>
+          </div>
+          <p class="coupon-message" id="couponMessage">
+            Use SAVE10 for 10% off your order.
+          </p>
+
+          <div class="summary-row total-row">
+            <strong>TOTAL</strong>
+            <strong id="total">₹0</strong>
+          </div>
+
+          <button id="checkoutBtn" class="checkout-btn">PROCEED TO CHECKOUT ↗</button>
+          <p class="secure-note">DEMO CHECKOUT · NO PAYMENT WILL BE TAKEN</p>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <a href="#" class="logo footer-logo">BOUNDARY<span>XI</span></a>
+    <p>FOR THE LOVE OF THE GAME.</p>
+    <p>© <span id="year"></span> BOUNDARY XI. DEMO STORE.</p>
+  </footer>
+
+</body>
+</html>
